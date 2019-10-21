@@ -1,0 +1,565 @@
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import './variables.scss';
+
+.navbar {
+  background-color: $lightOrange;
+  a {
+    color: black;
+  }
+}
+.navbar-nav {
+  margin-left: auto;
+
+  .active {
+    color: $lightBlue;
+  }
+  .nav-item {
+    .like {
+      padding-right: 0.5rem;
+      color: $yellowMedium;
+    }
+    .profile {
+      padding-right: 0.5rem;
+      color: $orange;
+    }
+  }
+}
+
+.big-wrapper {
+  display: flex;
+  width: 100%;
+  margin-top: 56px;
+  .sidebar {
+    padding: 1.5rem;
+    padding-bottom: 5rem;
+    width: 300px;
+    z-index: 999;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    overflow: scroll;
+    transition: all 0.3s;
+    background-color: $lightGrey;
+    @media (max-width: 768px) {
+      margin-left: -300px;
+    }
+    .sidebar-header {
+      padding-bottom: 2rem;
+      .hide-button {
+        padding-bottom: 5rem;
+
+        .button {
+          cursor: pointer;
+          font-size: 1.2rem;
+          .span {
+            font-size: 0.8rem;
+          }
+        }
+        .button:hover {
+          color: $lightBlue;
+        }
+      }
+    }
+    .categories {
+      .item {
+        display: flex;
+        align-items: center;
+        padding-bottom: 2rem;
+        .block {
+          min-width: 50px;
+          max-height: 50px;
+          min-height: 50px;
+          margin-right: 1rem;
+          border-radius: 8px;
+        }
+        .sports {
+          background-color: $lightYellow;
+        }
+        .education {
+          background-color: $lightBlue;
+        }
+        .culture {
+          background-color: $lightOrange;
+        }
+        .add {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $orange;
+          a {
+            color: white;
+          }
+        }
+        .info {
+          .title {
+            font-size: 0.9rem;
+            font-weight: bold;
+            padding-bottom: 0.2rem;
+          }
+          .description {
+            font-size: 0.8rem;
+          }
+        }
+      }
+      .item:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+  .add-padding {
+    padding-left: 22.25rem;
+    @media (max-width: 768px) {
+      padding-left: 1.5rem;
+    }
+  }
+  .reset-margin {
+    margin-left: 0;
+  }
+  .normalize-padding {
+    padding-left: 3rem;
+    @media (max-width: 768px) {
+      padding-left: 1.5rem;
+    }
+  }
+  .hide-nav {
+    margin-left: -300px;
+  }
+  .content {
+    transition: all 0.2s;
+    padding-top: 1.5rem;
+    padding-right: 3rem;
+    padding-bottom: 1.5rem;
+    width: 100%;
+    @media (max-width: 768px) {
+      padding-right: 1.5rem;
+    }
+
+    .button {
+      cursor: pointer;
+      font-size: 1.2rem;
+      display: none;
+      position: absolute;
+      @media (max-width: 768px) {
+        display: block;
+      }
+      .span {
+        font-size: 0.8rem;
+      }
+    }
+    .enable {
+      display: block;
+    }
+    .button:hover {
+      color: $lightBlue;
+    }
+    .welcome {
+      padding-top: 2rem;
+      padding-bottom: 4rem;
+      h3 {
+        font-size: 4rem;
+        .highlight {
+          color: $orange;
+        }
+      }
+    }
+    .card-deck {
+      justify-content: space-evenly;
+      @media (max-width: 768px) {
+        align-items: center;
+      }
+      .card {
+        max-width: 300px;
+        min-width: 300px;
+        margin-bottom: 1.5rem;
+        .card-img-top {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    .section {
+      padding-bottom: 3rem;
+      .title {
+        padding: 0.2rem 1rem;
+        font-size: 1.7rem;
+        margin-bottom: 2rem;
+      }
+      .news {
+        border-left: solid 0.7rem $lightBlue;
+      }
+      .education {
+        border-left: solid 0.7rem $green;
+      }
+    }
+    .section:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.add-topic {
+  .content {
+    padding: 1.5rem 3rem;
+    width: 100%;
+    @media (max-width: 768px) {
+      padding: 1.5rem;
+    }
+    .search-bar {
+      padding-bottom: 5rem;
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 5rem;
+    }
+    .card-deck {
+      justify-content: space-evenly;
+      @media (max-width: 768px) {
+        align-items: center;
+      }
+      .card {
+        max-width: 300px;
+        min-width: 300px;
+        margin-bottom: 1.5rem;
+        &:hover {
+          cursor: pointer;
+          background-color: $lightGrey;
+        }
+        &:active {
+          background-color: $green;
+        }
+        .card-img-top {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    .section {
+      padding-bottom: 3rem;
+      .title {
+        padding: 0.2rem 1rem;
+        font-size: 1.7rem;
+        margin-bottom: 2rem;
+      }
+      .news {
+        border-left: solid 0.7rem $lightBlue;
+      }
+      .education {
+        border-left: solid 0.7rem $green;
+      }
+    }
+    .section:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.login-body {
+  //background: $lightBlue;
+  background-image: url('assets/backgrounds/login-bg.png');
+  background-repeat: no-repeat;
+  background-position: left top;
+
+  //background: linear-gradient(to right, $lightOrange, $lightYellow);
+}
+
+.small-margin {
+  margin: $smallMargin;
+}
+
+.login-card {
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+
+  .card-title {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+
+  .card-body {
+    padding: 2rem;
+  }
+
+  .form-login {
+    width: 100%;
+  }
+
+  .form-login .btn {
+    font-size: 80%;
+    border-radius: 5rem;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    padding: 1rem;
+    transition: all 0.2s;
+  }
+
+  .form-label-group {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+
+  .form-label-group input {
+    height: auto;
+    padding: 8px;
+    border-radius: 2rem;
+  }
+
+  .btn-google {
+    background-color: rgb(241, 76, 76);
+    color: white;
+
+    &:hover {
+      background-color: rgb(230, 59, 59);
+    }
+  }
+
+  .btn-login {
+    background-color: $orange;
+    color: white;
+    &:hover {
+      background-color: $orangeHover;
+    }
+  }
+
+  .btn-facebook {
+    background-color: rgb(78, 119, 255);
+    color: white;
+    &:hover {
+      background-color: rgb(70, 106, 224);
+    }
+  }
+}
+
+.landing {
+  .welcome-left {
+    a {
+      color: white;
+    }
+    h5 {
+      margin-top: $smallMargin * 2;
+      font-size: 38px;
+      font-style: bold;
+    }
+
+    p {
+      margin-top: $smallMargin;
+      font-size: 21px;
+      width: 65%;
+    }
+
+    .call-for-action {
+      background-color: $orange;
+      color: white;
+      &:hover {
+        background-color: $orangeHover;
+      }
+    }
+  }
+
+  .welcome-right {
+    img {
+      margin-top: $smallMargin * 4;
+
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .row {
+    width: auto;
+  }
+  .first-row {
+    height: 100%;
+    padding: 5rem 0;
+    background-image: url('assets/backgrounds/welcome-bg.png');
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+  .second-row {
+    background-color: $lightGrey;
+    padding: 5rem 0;
+    .features-image {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .features-text {
+      .wrapper-icon {
+        display: flex;
+        padding-bottom: 1.2rem;
+        .icon {
+          padding-right: 1.5rem;
+          color: $lightBlue;
+        }
+        .description {
+          .title {
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding-bottom: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+  .third-row {
+    padding: 5rem 0;
+    .carousel-caption {
+      background-color: rgba(128, 128, 128, 0.527);
+    }
+    .fa-chevron-right {
+      font-size: 7rem;
+      color: $green;
+    }
+    .fa-chevron-left {
+      font-size: 7rem;
+      color: $green;
+    }
+    .carousel-item {
+      img {
+        max-height: 400px;
+      }
+    }
+  }
+}
+
+.register-card {
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+
+  .card-title {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+
+  .card-body {
+    padding: 2rem;
+    .g-recaptcha {
+      position: relative;
+      left: 10%;
+      padding-bottom: 1rem;
+    }
+  }
+
+  .form-register {
+    width: 100%;
+  }
+
+  .form-register .btn {
+    font-size: 80%;
+    border-radius: 5rem;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    padding: 1rem;
+    transition: all 0.2s;
+  }
+
+  .form-label-group {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+
+  .form-label-group input {
+    height: auto;
+    padding: 8px;
+    border-radius: 2rem;
+  }
+
+  .btn-register {
+    background-color: $orange;
+    color: white;
+    &:hover {
+      background-color: $orangeHover;
+    }
+  }
+}
+.topics {
+  .content {
+    padding: 1.5rem 3rem;
+    width: 100%;
+    @media (max-width: 768px) {
+      padding: 1.5rem;
+    }
+    .search-bar {
+      padding-bottom: 5rem;
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 5rem;
+    }
+    .card-deck {
+      justify-content: space-evenly;
+      @media (max-width: 768px) {
+        align-items: center;
+      }
+      .card {
+        max-width: 300px;
+        min-width: 300px;
+        margin-bottom: 1.5rem;
+        &:hover {
+          cursor: pointer;
+          background-color: $lightGrey;
+        }
+        &:active {
+          background-color: $green;
+        }
+        .card-img-top {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    .section {
+      padding-bottom: 3rem;
+      .title {
+        padding: 0.2rem 1rem;
+        font-size: 1.7rem;
+        margin-bottom: 2rem;
+      }
+
+      .sports {
+        border-left: solid 0.7rem $yellowMedium;
+      }
+      .btn-danger {
+        font-size: 0.7rem;
+      }
+    }
+    .section:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.profile {
+  .welcome {
+    margin-top: $smallMargin;
+
+    img {
+      width: 100%;
+    }
+
+    .title {
+      padding: 2rem 0 0 5rem;
+    }
+
+    .name {
+      color: $orange;
+      padding: 0.5rem 0 0 5rem;
+    }
+
+    .info {
+      padding-left: 5rem;
+    }
+  }
+
+  .sign-out {
+    margin-left: 3.5em;
+
+    i {
+      margin-right: 1em;
+    }
+  }
+}
