@@ -3,13 +3,13 @@
   <div class="big-wrapper">
     <app-sidebar></app-sidebar>
     <div class="content" id="content">
-      <div class="welcome">
+      <div class="welcome wow fadeIn" data-wow-duration="2s">
         <h3>Bienvenido <span class="highlight">Juan</span>...</h3>
       </div>
       <div class="section">
         <div class="title news">Noticias</div>
         <div class="card-deck">
-          <div class="card" *ngFor="let topic of newsTopics">
+          <div class="card wow slideInUp" data-wow-duration="2s" *ngFor="let topic of newsTopics">
             <img src={{topic.image}} class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title"> <strong>{{topic.title}}</strong> </h5>
@@ -23,7 +23,7 @@
       <div class="section">
         <div class="title education">Educación</div>
         <div class="card-deck">
-          <div class="card" *ngFor="let topic of topics">
+          <div class="card wow slideInUp" data-wow-duration="2s" *ngFor="let topic of topics">
             <img src={{topic.image}} class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title"> <strong>{{topic.title}}</strong> </h5>
