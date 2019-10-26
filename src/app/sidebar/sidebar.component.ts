@@ -12,7 +12,7 @@ import { Topic } from '../models/topic';
 export class SidebarComponent implements OnInit {
   public isCollapsed = false;
   topics: Topic[];
-
+  
   constructor(private topicService: TopicService) {
     this.topics = this.topicService.getTopics();
   }

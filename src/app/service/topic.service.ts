@@ -33,5 +33,10 @@ export class TopicService {
     this.arr.push(topic);
   }
 
+  deleteTopic(topic: Topic){
+    let pos = this.arr.indexOf(topic);
+    this.arr.splice(pos, 1);
+  }
+
   constructor() { }
 }

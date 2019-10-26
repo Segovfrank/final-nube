@@ -1,12 +1,15 @@
-<p>
-
-    <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
-        [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
-        Toggle
-    </button>
-</p>
+<button type="button"[hidden]="!isCollapsed" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
+[attr.aria-expanded]="isCollapsed" aria-controls="collapseExample">
+Mostrar
+</button>
 <div id="collapseExample" [ngbCollapse]="isCollapsed">
     <div class="card">
+        <p>
+            <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
+                [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+                Ocultar
+            </button>
+        </p>
         <div class="card-body">
             <div class="sidebar-header">
                 <h3>Mis temas</h3>

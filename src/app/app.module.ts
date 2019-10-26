@@ -14,11 +14,13 @@ import { ProfileComponent } from './profile/profile.component';
 import { AddComponent } from './add/add.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { SidebarComponent } from './sidebar/sidebar.component';  
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { GraphComponent } from './graph/graph.component';  
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
-  declarations: [AppComponent, LandingComponent, NavBarComponent, LoginComponent, RegisterComponent, DashboardComponent, NavDashboardComponent, TopicsComponent, ProfileComponent, AddComponent, CarouselComponent, SidebarComponent],
-  imports: [BrowserModule, AppRoutingModule,NgbModule],
+  declarations: [AppComponent, LandingComponent, NavBarComponent, LoginComponent, RegisterComponent, DashboardComponent, NavDashboardComponent, TopicsComponent, ProfileComponent, AddComponent, CarouselComponent, SidebarComponent, GraphComponent],
+  imports: [BrowserModule, AppRoutingModule,NgbModule, ChartsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
