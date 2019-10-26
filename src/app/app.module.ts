@@ -12,10 +12,13 @@ import { NavDashboardComponent } from './nav-dashboard/nav-dashboard.component';
 import { TopicsComponent } from './topics/topics.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AddComponent } from './add/add.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SidebarComponent } from './sidebar/sidebar.component';  
 
 @NgModule({
-  declarations: [AppComponent, LandingComponent, NavBarComponent, LoginComponent, RegisterComponent, DashboardComponent, NavDashboardComponent, TopicsComponent, ProfileComponent, AddComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [AppComponent, LandingComponent, NavBarComponent, LoginComponent, RegisterComponent, DashboardComponent, NavDashboardComponent, TopicsComponent, ProfileComponent, AddComponent, CarouselComponent, SidebarComponent],
+  imports: [BrowserModule, AppRoutingModule,NgbModule],
   providers: [],
   bootstrap: [AppComponent]
 })

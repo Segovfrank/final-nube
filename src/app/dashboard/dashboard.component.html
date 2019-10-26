@@ -1,116 +1,20 @@
 <section>
   <app-nav-dashboard></app-nav-dashboard>
   <div class="big-wrapper">
-    <nav class="sidebar" id="sidebar">
-      <div class="sidebar-header">
-        <div class="hide-button">
-          <a class="button" id="sidebarCollapse" data-toggle="true"><span class="span"> &lt; </span>Ocultar</a>
-        </div>
-        <h3>Mis temas</h3>
-      </div>
-      <div class="categories">
-        <div class="item">
-          <div class="block sports"></div>
-          <div class="info">
-            <div class="title">Deportes</div>
-            <div class="description">Liga Mexicana, Internacional</div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="block education"></div>
-          <div class="info">
-            <div class="title">Educación</div>
-            <div class="description">Idioma inglés, matemáticas</div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="block culture"></div>
-          <div class="info">
-            <div class="title">Cultura</div>
-            <div class="description">Datos del mundo, México desconocido</div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="block add">
-            <a [routerLink]="['/add']"><i class="fas fa-plus"></i></a>
-          </div>
-          <div class="info">
-            <div class="title">Agrega</div>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <div class="content add-padding" id="content">
-      <a class="button" id="sidebarShow"><span class="span"> > </span>Mostrar</a>
+    <app-sidebar></app-sidebar>
+    <div class="content" id="content">
       <div class="welcome">
         <h3>Bienvenido <span class="highlight">Juan</span>...</h3>
       </div>
       <div class="section">
         <div class="title news">Noticias</div>
         <div class="card-deck">
-          <div class="card">
-            <img src="assets/images/news.jpg" class="card-img-top" alt="..." />
+          <div class="card" *ngFor="let topic of newsTopics">
+            <img src={{topic.image}} class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title"> <strong>{{topic.title}}</strong> </h5>
               <p class="card-text">
-                This is a wider card with supporting text below as a natural lead-in to additional content. This card
-                has even longer content than
-                the first to show that equal height action.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="assets/images/news-placeholder.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural lead-in to additional content. This card
-                has even longer content than
-                the first to show that equal height action.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="assets/images/news.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural lead-in to additional content. This card
-                has even longer content than
-                the first to show that equal height action.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="assets/images/news-placeholder-2.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural lead-in to additional content. This card
-                has even longer content than
-                the first to show that equal height action.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="assets/images/news.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural lead-in to additional content. This card
-                has even longer content than
-                the first to show that equal height action.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="assets/images/news-placeholder-2.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural lead-in to additional content. This card
-                has even longer content than
-                the first to show that equal height action.
+                {{topic.description}}
               </p>
             </div>
           </div>
@@ -119,69 +23,12 @@
       <div class="section">
         <div class="title education">Educación</div>
         <div class="card-deck">
-          <div class="card">
-            <img src="assets/images/news.jpg" class="card-img-top" alt="..." />
+          <div class="card" *ngFor="let topic of topics">
+            <img src={{topic.image}} class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title"> <strong>{{topic.title}}</strong> </h5>
               <p class="card-text">
-                This is a wider card with supporting text below as a natural lead-in to additional content. This card
-                has even longer content than
-                the first to show that equal height action.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="assets/images/news-placeholder.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural lead-in to additional content. This card
-                has even longer content than
-                the first to show that equal height action.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="assets/images/news.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural lead-in to additional content. This card
-                has even longer content than
-                the first to show that equal height action.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="assets/images/news-placeholder-2.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural lead-in to additional content. This card
-                has even longer content than
-                the first to show that equal height action.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="assets/images/news.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural lead-in to additional content. This card
-                has even longer content than
-                the first to show that equal height action.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="assets/images/news-placeholder-2.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural lead-in to additional content. This card
-                has even longer content than
-                the first to show that equal height action.
+                {{topic.description}}
               </p>
             </div>
           </div>

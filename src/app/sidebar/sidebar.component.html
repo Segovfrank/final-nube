@@ -1,0 +1,31 @@
+<p>
+
+    <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
+        [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+        Toggle
+    </button>
+</p>
+<div id="collapseExample" [ngbCollapse]="isCollapsed">
+    <div class="card">
+        <div class="card-body">
+            <div class="sidebar-header">
+                <h3>Mis temas</h3>
+            </div>
+            <div class="categories">
+                <div class="item card" *ngFor="let topic of topics">
+                    <strong>{{topic.title}}</strong>
+                    <p>{{topic.description}}</p>
+                </div>
+                <div class="item">
+                    <div class="block add">
+                        <a (click)="addTopic()"><i class="fas fa-chevron-circle-right"></i>
+                        </a>
+                    </div>
+                    <div class="info">
+                        <div class="title">Agregar</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
