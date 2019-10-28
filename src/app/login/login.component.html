@@ -6,32 +6,37 @@
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
         <div class="card login-card my-5">
           <div class="card-body">
-            <h5 class="card-title text-center">Ingresa</h5>
-            <form class="form-login">
+            <h5 class="card-title text-center">{{'login.Login'|translate}}</h5>
+            <form class="form-login" #formulario="ngForm" [hidden]="submitted">
               <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" required autofocus />
+                <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" name="email" required autofocus [(ngModel)]="user.email"/>
               </div>
 
               <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required />
+                <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" name="password" required  [(ngModel)]="user.password"/>
               </div>
 
               <div class="custom-control custom-checkbox mb-3">
                 <input type="checkbox" class="custom-control-input" id="customCheck1" />
-                <label class="custom-control-label" for="customCheck1">Recuerda contraseña</label>
+                <label class="custom-control-label" for="customCheck1">{{'login.Remember'|translate}}</label>
               </div>
-              <button class="btn btn-lg btn-block text-uppercase btn-login" type="submit">
-                Ingresa
+              <button class="btn btn-lg btn-block text-uppercase btn-login" type="submit" value="submit" (click)="submit(formulario.value);">
+                  {{'login.Login'|translate}}
               </button>
-              <p class="small-margin">¿No tienes cuenta? <a href="#">Regsitrate</a></p>
+              <p class="small-margin">{{'login.NoAccount'|translate}} <a href="#">{{'login.Register'|translate}}</a></p>
               <hr class="my-4" />
               <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit">
-                <i class="fab fa-google mr-2"></i> Ingresa con google
+                <i class="fab fa-google mr-2"></i> {{'login.GoogleLogin'|translate}}
               </button>
               <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit">
-                <i class="fab fa-facebook-f mr-2"></i> Ingresa con facebook
+                <i class="fab fa-facebook-f mr-2"></i> {{'login.FacebookLogin'|translate}}
               </button>
             </form>
+            <div [hidden]="!submitted">
+              Datos enviados
+              <br>
+              <strong>{{user.email}}</strong>
+            </div>
           </div>
         </div>
       </div>

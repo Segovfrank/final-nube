@@ -1,0 +1,39 @@
+{
+    "landing":{
+        "Title":"Welcome to the App!",
+        "Subtitle": "Learn about your topics of interest in a fun way.",
+        "CallToAction": "Login",
+        "Point1": "Customize",
+        "Point1Desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci unde eius recusandae odio similique nesciunt laudantium distinctio ut omnis sed porro.",
+        "Point2": "Current information",
+        "Point2Desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci unde eius recusandae odio similique nesciunt laudantium distinctio ut omnis sed porro.",
+        "Point3": "Learn from anywhere",
+        "Point3Desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci unde eius recusandae odio similique nesciunt laudantium distinctio ut omnis sed porro."
+    },
+    "navbar":{
+        "Home": "Home",
+        "Login": "Login",
+        "Register": "Register",
+        "Dashboard": "Dashboard",
+        "Tendencies": "Tendency"
+    },
+    "login":{
+        "Remember": "Remember password",
+        "Login": "Login",
+        "GoogleLogin": "Login with google",
+        "FacebookLogin": "Login with facebook",
+        "Register": "Register",
+        "NoAccount": "Don't have an account?"
+    },
+    "register":{
+        "Register": "Register"
+    },
+    "dashboard":{
+        "Welcome": "Welcome",
+        "Hide": "Hide",
+        "Show": "Show",
+        "Add": "Add"
+    },
+    "changeLang": "ES"
+
+}

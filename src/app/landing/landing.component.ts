@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-//import { CarouselComponent } from '../carousel/carousel.component';
 
 @Component({
   selector: 'app-landing',
@@ -8,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit() {
   }

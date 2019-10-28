@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,12 +18,23 @@ import { AddComponent } from './add/add.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { GraphComponent } from './graph/graph.component';  
+import { GraphComponent } from './graph/graph.component';
 import { ChartsModule } from 'ng2-charts';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [AppComponent, LandingComponent, NavBarComponent, LoginComponent, RegisterComponent, DashboardComponent, NavDashboardComponent, TopicsComponent, ProfileComponent, AddComponent, CarouselComponent, SidebarComponent, GraphComponent],
-  imports: [BrowserModule, AppRoutingModule,NgbModule, ChartsModule],
+  imports: [BrowserModule, AppRoutingModule,NgbModule, ChartsModule, FormsModule, HttpClientModule, TranslateModule.forRoot({
+    loader: {
+      provide: TranslateLoader,
+      useFactory: (http: HttpClient) => {
+        return new TranslateHttpLoader(http);
+      },
+      deps: [HttpClient]
+    }
+  })
+],
   providers: [],
   bootstrap: [AppComponent]
 })
