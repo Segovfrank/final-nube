@@ -1,8 +1,8 @@
 {
     "landing":{
-        "Title":"Welcome to the App!",
-        "Subtitle": "Learn about your topics of interest in a fun way.",
-        "CallToAction": "Login",
+        "Title":"Pet name creator",
+        "Subtitle": "Create random pet names and navigate through your past pet names.",
+        "CallToAction": "Create",
         "Point1": "Customize",
         "Point1Desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci unde eius recusandae odio similique nesciunt laudantium distinctio ut omnis sed porro.",
         "Point2": "Current information",
@@ -14,8 +14,7 @@
         "Home": "Home",
         "Login": "Login",
         "Register": "Register",
-        "Dashboard": "Dashboard",
-        "Tendencies": "Tendency"
+        "Dashboard": "Pet names"
     },
     "login":{
         "Remember": "Remember password",

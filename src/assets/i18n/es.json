@@ -1,8 +1,8 @@
 {
     "landing":{
-        "Title":"Bienvenido a la App!",
-        "Subtitle": "Aprende acerca de tus temas de interés en una manera divertida.",
-        "CallToAction": "Ingresa",
+        "Title":"Creador de nombres",
+        "Subtitle": "Crea nombre de mascotas y navega por los nombres ya creados.",
+        "CallToAction": "Crear",
         "Point1": "Personaliza",
         "Point1Desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci unde eius recusandae odio similique nesciunt laudantium distinctio ut omnis sed porro.",
         "Point2": "Información actual",
@@ -14,8 +14,7 @@
         "Home": "Inicio",
         "Login": "Ingresa",
         "Register": "Registro",
-        "Dashboard": "Mi panel",
-        "Tendencies": "Tendencias"
+        "Dashboard": "Mascotas"
     },
     "login":{
         "Remember": "Recuerda contraseña",

@@ -21,10 +21,14 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { GraphComponent } from './graph/graph.component';
 import { ChartsModule } from 'ng2-charts';
 import { FormsModule } from '@angular/forms';
+import { PetCreatorComponent } from './pet-creator/pet-creator.component';
+import { PetViewerComponent } from './pet-viewer/pet-viewer.component';
 
 
 @NgModule({
-  declarations: [AppComponent, LandingComponent, NavBarComponent, LoginComponent, RegisterComponent, DashboardComponent, NavDashboardComponent, TopicsComponent, ProfileComponent, AddComponent, CarouselComponent, SidebarComponent, GraphComponent],
+  declarations: [AppComponent, LandingComponent, NavBarComponent, LoginComponent, RegisterComponent, DashboardComponent,
+    NavDashboardComponent, TopicsComponent, ProfileComponent, AddComponent, CarouselComponent, SidebarComponent, 
+    GraphComponent, PetCreatorComponent, PetViewerComponent],
   imports: [BrowserModule, AppRoutingModule,NgbModule, ChartsModule, FormsModule, HttpClientModule, TranslateModule.forRoot({
     loader: {
       provide: TranslateLoader,
