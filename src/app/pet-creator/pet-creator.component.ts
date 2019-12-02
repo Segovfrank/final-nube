@@ -11,25 +11,39 @@ export class PetCreatorComponent implements OnInit {
 
   pet: Pet;
   submitted = false;
+  pets: Pet[];
 
   constructor(private apiService: ApiService) {
     this.pet = new Pet(1, '');
+
 
    }
 
   ngOnInit() {
     this.apiService.getPets().subscribe((res)=>{
-      this.apiService.getPets(this.apiService.nextPage).subscribe((res)=>{
-        console.log(res);
-      });      
+      this.apiService.getPets().subscribe((res)=>{
+        console.log("-----------------------------------");
+        //this.pets = res.body.pets as Pet[];
+        this.pets = res.body["pets"] as Pet[];
+        
+        console.log(this.pets);
+        console.log(res.body);
+      });
     });
   }
 
-  submit(formData) {
-    console.log(this.pet);
-    this.pet = new Pet(1, '');
-    this.submitted = true;
 
+
+random(){
+  this.apiService.createRandomPet().subscribe((res)=>{
+    this.apiService.createRandomPet().subscribe((res)=>{
+      this.apiService.getPets().subscribe((res)=>{
+        this.apiService.getPets().subscribe((res)=>{
+          this.pets = res.body["pets"] as Pet[];
+        });
+      });
+    });
+  });
 }
 
 

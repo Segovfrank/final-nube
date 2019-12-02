@@ -1,21 +1,15 @@
 <div class="container">
-    <form #formulario="ngForm" [hidden]="submitted">
 
-        <div class="form-group">
-            <label for="nombre">Nombre {{pet.name}}</label>
-            <input type="text" class="form-control" id="name" placeholder="Nombre" name="name"
-                [(ngModel)]="pet.name">
-        </div>
-        <div class="form-group">
-            <label for="paterno">Apellido </label>
-            <input type="text" class="form-control" id="surname" placeholder="Apellido" name="surname"
-                [(ngModel)]="pet.surname">
-        </div>
+    <div class="card wow flipInY" data-wow-duration="1s" *ngFor="let pet of pets; let i = index;">
+                  <p class="card-text">
+                    {{pet.name}} {{pet.surname}}
+                  </p>
+      
+    </div>
 
-        <button type="submit" value="submit" class="btn btn-success btn-block" id="form-btn" (click)="submit(formulario.value); formulario.reset();">
-        Enviar
-        </button>
-
-    </form>
-    <div [hidden]="!submitted">Formulario enviado</div>
+        
+        
+    <button type="" value="" class="btn btn-warning btn-block" id="form-btn" (click)="random();">
+            Aleatorio
+            </button>
 </div>
